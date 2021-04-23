@@ -1,0 +1,4 @@
+#Sun Feb 07 14:11:08 IST 2021
+base.0=/home/victor/Documents/Yogi/WorkSpace/Mp3bajo/android/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

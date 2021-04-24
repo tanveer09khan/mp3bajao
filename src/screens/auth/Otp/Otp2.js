@@ -114,7 +114,7 @@ export default class Otp2 extends Component {
                 <View style={{ marginTop: 30 }}>
                         <Button style={{ backgroundColor:"red", marginHorizontal: 40}}
                             contentStyle={{ paddingVertical: 8, borderRadius: 50}}
-                            mode="contained" onPress={() => this.props.navigation.navigate('Reset2')}>
+                            mode="contained" onPress={() => this.props.navigation.navigate('Reset1')}>
                                 <Text style={styles.White}>Continue</Text>
                             
                         </Button>

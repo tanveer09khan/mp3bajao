@@ -45,7 +45,7 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <ScrollView>
+            
             <ImageBackground source={require('../../assets/icons/bg.jpg')} style={{ flex: 1 }}>
                 
               <View style={{flex:1}}>
@@ -66,7 +66,7 @@ export default class Login extends Component {
                 </View>
 
                
-                <View style={{ flexDirection: 'row', marginTop: 335}}>
+                <View style={{ flexDirection: 'row'}}>
     <View style={{
             width: 100,
       flex:0.4,
@@ -94,7 +94,7 @@ export default class Login extends Component {
     <View style={{
             width: "50%",
       flex:0.54,
-      marginBottom:50,
+      marginBottom:20,
     
           }}>
       <TextInput style={{backgroundColor: "transparent"}}
@@ -113,7 +113,7 @@ export default class Login extends Component {
                         ---OR---
                     </Text>
                 </View>
-                <View style={{ flex: 0.1 }} />
+                {/* <View style={{ flex: 0.1 }} /> */}
                 <View style={{ flex: 1, marginHorizontal: 25 }}>
                     <View>
                         <TextInput style={{backgroundColor: "transparent"}}
@@ -127,7 +127,7 @@ export default class Login extends Component {
                         />
                     </View>
 
-                    <View style={{ marginTop: 25 }}>
+                    <View style={{ marginTop: 10}}>
                         <TextInput style={{backgroundColor: "transparent"}}
                             mode='flat'
                             placeholder="Password"
@@ -169,7 +169,7 @@ export default class Login extends Component {
                 <Text style={{ alignSelf: 'flex-end', marginRight: 10, color: 'red' }}>BV 02.07.01</Text>
 </View>
             </ImageBackground >
-            </ScrollView>
+            
         )
     }
 }

@@ -23,7 +23,7 @@ const Setting = ({ navigation }) => {
             /> */}
 
 
-            <Headline style={{ marginLeft: 23, marginBottom: 10 ,fontSize:20}}>Account</Headline>
+            <Headline style={{ marginLeft: 23, marginBottom: 10 ,fontSize:20,marginTop:30}}>Account</Headline>
 
             <Card style={{ marginVertical: 2 }}>
                 <List.Item
@@ -32,7 +32,7 @@ const Setting = ({ navigation }) => {
                         'MyAccount'
                     )
                 }}
-                    title="My Account"
+                    title ="My Account"
                     left={() => <Icon name="shield-checkmark-outline" size={25} style={{ marginRight: 30, color:"grey",padding:10}} />}
                 />
             </Card>

@@ -11,6 +11,9 @@ import {
     Headline,
     TextInput,
     IconButton,
+    Provider as PaperProvider,
+    DefaultTheme,
+    DarkTheme 
 } from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 
@@ -24,60 +27,70 @@ import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
 import Ionicons from "react-native-vector-icons/Ionicons"
 
 
-
+const theme = {
+    ...DefaultTheme,
+    roundness: 2,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: 'tomato',
+      accent: '#152238',
+      background: '#152238'
+    },
+  };
 
 
 export default class Reset2 extends Component {
 
     render() {
         return (
+            <PaperProvider theme={theme}>
             <ScrollView>
 
-            <View style={{ backgroundColor: "rgb(102,205,170)", flex: 1 }}>
+            <View>
 
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Reset1')} style={{ marginLeft: 15, flexDirection: 'row', marginTop: 20, alignItems: 'center' }}>
-                    <Ionicons name="arrow-back-outline" size={35} color="white" style={{ marginRight: 10 }} />
+                    <Ionicons name="arrow-back-outline" size={35} color="red" style={{ marginRight: 10 }} />
                 </TouchableOpacity>
 
                 <TouchableOpacity style={{ marginLeft: 15, marginTop: 20, alignItems: 'center' }}>
-                    <Ionicons name="lock-closed-outline" size={80} color="white" style={{ marginRight: 10 }} />
+                    <Ionicons name="lock-closed-outline" size={80} color="grey" style={{ marginRight: 10 }} />
                 </TouchableOpacity>
 
                 <View style={{ alignItems: "center" }}>
-                <Text style={{ fontSize: 25, color: "white", marginTop: 20, alignItems: "center" }}>
+                <Text style={{ fontSize: 25, color: "grey", marginTop: 20, alignItems: "center" }}>
                    Reset your password
                 </Text>
-                <Text style={{ fontSize: 20, color: "white", marginTop: 20, alignItems: "center" }}>
+                <Text style={{ fontSize: 20, color: "grey", marginTop: 20, alignItems: "center" }}>
                    We have sent a four digit code on your
                 </Text>
-                <Text style={{ fontSize: 20, color: "white", marginTop: 5, alignItems: "center" }}>
+                <Text style={{ fontSize: 20, color: "grey", marginTop: 5, alignItems: "center" }}>
                    phone/email
                 </Text>
                 </View>
                 <View style={{ flex: 1, marginHorizontal: 50 }}>
                     <View>
-                        <TextInput style={{marginTop:30}}
+                        <TextInput style={{marginTop:30,backgroundColor:"transparent"}}
                             mode='flat'
                             placeholder="Four digit code "
-                            placeholderTextColor="Black"
+                            placeholderTextColor="grey"
                         // value={text}
                         // onChangeText={text => setText(text)}
                         />
                     </View>
                     <View>
-                        <TextInput style={{marginTop:30}}
+                        <TextInput style={{marginTop:30,backgroundColor:"transparent"}}
                             mode='flat'
                             placeholder="New Password"
-                            placeholderTextColor="Black"
+                            placeholderTextColor="grey"
                         // value={text}
                         // onChangeText={text => setText(text)}
                         />
                     </View>
                     <View>
-                        <TextInput style={{marginTop:30}}
+                        <TextInput style={{marginTop:30,backgroundColor:"transparent"}}
                             mode='flat'
                             placeholder="Confirm Password"
-                            placeholderTextColor="Black"
+                            placeholderTextColor="grey"
                         // value={text}
                         // onChangeText={text => setText(text)}
                         />
@@ -87,16 +100,17 @@ export default class Reset2 extends Component {
                    
 
                     <View style={{ marginTop: 60 }}>
-                        <Button style={{borderRadius: 50 , backgroundColor:"white"}}
+                        <Button style={{ backgroundColor:"red"}}
                             contentStyle={{ paddingVertical: 8, borderRadius: 50}}
                             mode="contained" onPress={() => this.props.navigation.navigate('Reset3')}>
-                                <Text>Reset Password</Text>
+                                <Text style={styles.White}>Reset Password</Text>
                             
                         </Button>
                     </View>
                 </View>
             </View>
             </ScrollView>
+            </PaperProvider>
         )
     }
 }
@@ -109,5 +123,11 @@ const styles = StyleSheet.create({
     button: {
         width: '40%',
         height: 40
-    }
+    },
+    White: {
+    
+        // Define your HEX color code here.
+        color: 'white'
+        
+      }
 });

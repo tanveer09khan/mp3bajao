@@ -17,6 +17,7 @@ import Header from '../../common/Header';
 import { Myicons } from "../../common/styles";
 import Banner from "../../../Shared/Banner"
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Ionicons from "react-native-vector-icons/Ionicons"
 
 export default class Home extends React.Component {
     
@@ -55,24 +56,14 @@ export default class Home extends React.Component {
                     <View style={styles.button}>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate('AllTab')} >
                             {/* <Ionicons name="ios-arrow-forward-circle-outline" size={25} color="#0047AB" style={{ marginLeft: 10 }} /> */}
-                            <Text style={{ marginTop: 20, marginLeft: 10, color: 'red', fontSize: 20 }}>About</Text>
+                            <Text style={{ marginTop: 10, marginLeft:150 , color: 'red', fontSize: 20, alignSelf:"center" }}>M P 3 B a j a o</Text>
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.button}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('RadioScreen')}>
-                           
-                            <Text style={{ marginTop: 20, marginLeft: 20, color: 'red', fontSize: 20 }}>Radio</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <Searchbar
-                placeholder="Search"
-                // onChangeText={(text) => this.setState({ query: text })}
-                // value={this.state.query}
-                // onChangeText={(text) => setquery({ query: text })}
-                // value={query}
-                style={{ marginVertical: 5, marginLeft: 20 , width:"64%" }}
-            />
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Search')} style={{ marginLeft:120,flexDirection: 'row', marginTop: 10,alignSelf:"flex-end"}}>
+                    <Ionicons name="search" size={25} color="red" style={{ marginRight: 10 }} />
+                </TouchableOpacity>
+                    
                     </View>
                 {/* </View> */}
                 {/* <Tab.Navigator
@@ -141,8 +132,8 @@ export default class Home extends React.Component {
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, marginVertical: 15 }}>
                             <Text>Latest Albums</Text>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('List')}>
-                                <Text>Show more</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('ListSeperate')}>
+                                <Text style={{color:"red",fontSize:12}}>Show more</Text>
                             </TouchableOpacity>
                         </View>
 
@@ -181,8 +172,8 @@ export default class Home extends React.Component {
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, marginVertical: 15 }}>
                             <Text>Top Albums</Text>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('List')}>
-                                <Text>Show more</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('ListSeperate')}>
+                                <Text style={{color:"red",fontSize:12}}>Show more</Text>
                             </TouchableOpacity>
                         </View>
 
@@ -198,7 +189,7 @@ export default class Home extends React.Component {
                                             {/* <Myicons source={item.image} size={100} _style={{ borderRadius: 8, }} /> */}
                                             {/* <Card.Content style={{}}> */}
                                             <View style={{ width: 100, borderTopRightRadius: 10 }}>
-                                                <Myicons source={item.image} size={100} _style={{}}
+                                                <Myicons source={require("../../assets/icons/sld.jpg")} size={100} _style={{}}
                                                     onImagePress={() => this.props.navigation.navigate('Trackplayer')}
                                                 />
                                             </View>
@@ -219,9 +210,9 @@ export default class Home extends React.Component {
                     <View>
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, marginVertical: 15 }}>
-                            <Text>Artiest</Text>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('List')}>
-                                <Text>Show more</Text>
+                            <Text>Artists</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Artist')}>
+                                <Text style={{color:"red",fontSize:12}}>Show more</Text>
                             </TouchableOpacity>
                         </View>
 
@@ -234,7 +225,7 @@ export default class Home extends React.Component {
                                 return (
                                     <View>
                                         <View style={{ marginHorizontal: 8, backgroundColor: '#fff', height: 70, width: 70, borderRadius: 70 / 2, alignItems: 'center' }}>
-                                            {/* <Myicons source={item.image} size={100} _style={{}} /> */}
+                                            <Myicons source={require("../../assets/icons/artist.jpg")} size={70} _style={{ borderRadius:900/2}} />
                                         </View>
                                         <View style={{ marginTop: 5, }}>
                                             <Text style={{ fontSize: 13, textAlign: 'center' }}>{item.title}</Text>
@@ -255,9 +246,9 @@ export default class Home extends React.Component {
                     <View>
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5, marginVertical: 15 }}>
-                            <Text>Top Albums</Text>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('List')}>
-                                <Text>Show more</Text>
+                            <Text>Featured Albums</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('ListSeperate')}>
+                                <Text style={{color:"red",fontSize:12}}>Show more</Text>
                             </TouchableOpacity>
                         </View>
 

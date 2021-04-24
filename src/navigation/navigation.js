@@ -36,6 +36,11 @@ import ForgotPass from '../screens/auth/ForgotPass'
 import Reset1 from '../screens/auth/Reset/Reset1'
 import Reset2 from '../screens/auth/Reset/Reset2'
 import Reset3 from '../screens/auth/Reset/Reset3'
+import ListSeperate from '../screens/secondtab/ListSeperate'
+import Search from '../screens/secondtab/Search'
+import Artist from '../screens/secondtab/Artist'
+import ArtistInfo from '../screens/secondtab/ArtistInfo'
+import ArtistDetail from '../screens/thirdtab/ArtistDetail'
 
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
@@ -220,6 +225,7 @@ function AllTab() {
                       }}
                  }
             />
+             {/* <Tab.Screen name="ArtistInfo" component={ArtistInfo}/> */}
         </Tab.Navigator>
     )
 
@@ -256,6 +262,11 @@ export default () => {
                     <Stack.Screen name="MyAccount" component={MyAccount} />
                     <Stack.Screen name="Otp2" component={Otp2} />
                     <Stack.Screen name="Otp1" component={Otp1} />
+                    <Stack.Screen name="ListSeperate" component={ListSeperate} />
+                    <Stack.Screen name="Search" component={Search} />
+                    <Stack.Screen name="Artist" component={Artist} />
+                    <Stack.Screen name="ArtistInfo" component={ArtistInfo} />
+                    <Stack.Screen name="ArtistDetail" component={ArtistDetail} />
                 </Stack.Navigator>
             </PaperProvider>
 
